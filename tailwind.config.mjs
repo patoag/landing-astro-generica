@@ -2,10 +2,6 @@
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   darkMode: 'class',
-  // Habilitamos las nuevas características de Tailwind v4
-  future: {
-    hoverOnlyWhenSupported: true,
-  },
   theme: {
     extend: {
       colors: {
