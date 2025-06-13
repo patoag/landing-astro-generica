@@ -1,0 +1,174 @@
+---
+// FAQ section component
+---
+
+<section id="faq" class="py-20 bg-gray-50 dark:bg-gray-800">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16 animate-slide-up">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Preguntas frecuentes
+      </h2>
+      <p class="text-xl text-gray-600 dark:text-gray-400">
+        Resolvemos las dudas más comunes sobre nuestra plataforma
+      </p>
+    </div>
+
+    <!-- FAQ Items -->
+    <div class="space-y-4">
+      <!-- FAQ Item 1 -->
+      <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md">
+        <button 
+          class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors"
+          onclick="toggleFAQ('faq1')"
+        >
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+            ¿Cómo puedo empezar con la plataforma?
+          </h3>
+          <svg id="faq1-icon" class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div id="faq1" class="hidden px-6 pb-4">
+          <p class="text-gray-600 dark:text-gray-400">
+            Comenzar es muy sencillo. Solo necesitas registrarte con tu email, elegir el plan que mejor se adapte a tus necesidades y seguir nuestro asistente de configuración. En menos de 5 minutos tendrás todo listo para empezar a trabajar.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md">
+        <button 
+          class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors"
+          onclick="toggleFAQ('faq2')"
+        >
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+            ¿Puedo cambiar de plan en cualquier momento?
+          </h3>
+          <svg id="faq2-icon" class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div id="faq2" class="hidden px-6 pb-4">
+          <p class="text-gray-600 dark:text-gray-400">
+            ¡Por supuesto! Puedes cambiar de plan cuando quieras desde tu panel de control. Si actualizas, los cambios son inmediatos. Si reduces el plan, los cambios se aplicarán en tu próximo ciclo de facturación para que aproveches al máximo lo que ya has pagado.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md">
+        <button 
+          class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors"
+          onclick="toggleFAQ('faq3')"
+        >
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+            ¿Qué tipo de soporte técnico ofrecen?
+          </h3>
+          <svg id="faq3-icon" class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div id="faq3" class="hidden px-6 pb-4">
+          <p class="text-gray-600 dark:text-gray-400">
+            Ofrecemos soporte por email para todos los planes. Los usuarios del plan Profesional tienen acceso a soporte prioritario 24/7, mientras que los usuarios Empresariales cuentan con un gerente de cuenta dedicado y soporte telefónico directo.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 4 -->
+      <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md">
+        <button 
+          class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors"
+          onclick="toggleFAQ('faq4')"
+        >
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+            ¿Mis datos están seguros?
+          </h3>
+          <svg id="faq4-icon" class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div id="faq4" class="hidden px-6 pb-4">
+          <p class="text-gray-600 dark:text-gray-400">
+            La seguridad es nuestra prioridad. Utilizamos encriptación end-to-end, autenticación de dos factores, copias de seguridad automáticas y cumplimos con las regulaciones GDPR y SOC 2. Tus datos están protegidos con los más altos estándares de la industria.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 5 -->
+      <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md">
+        <button 
+          class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors"
+          onclick="toggleFAQ('faq5')"
+        >
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+            ¿Ofrecen integraciones con otras herramientas?
+          </h3>
+          <svg id="faq5-icon" class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div id="faq5" class="hidden px-6 pb-4">
+          <p class="text-gray-600 dark:text-gray-400">
+            Sí, tenemos más de 100 integraciones disponibles con herramientas populares como Slack, Google Workspace, Microsoft 365, Zapier, y muchas más. También ofrecemos APIs robustas para integraciones personalizadas en los planes Profesional y Empresarial.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 6 -->
+      <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md">
+        <button 
+          class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors"
+          onclick="toggleFAQ('faq6')"
+        >
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+            ¿Qué sucede si cancelo mi suscripción?
+          </h3>
+          <svg id="faq6-icon" class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div id="faq6" class="hidden px-6 pb-4">
+          <p class="text-gray-600 dark:text-gray-400">
+            Puedes cancelar tu suscripción en cualquier momento sin penalizaciones. Mantendrás acceso completo hasta el final de tu período de facturación actual. Después, tu cuenta pasará a modo de solo lectura por 30 días, dándote tiempo para exportar tus datos si lo necesitas.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact for more questions -->
+    <div class="text-center mt-12">
+      <p class="text-gray-600 dark:text-gray-400 mb-4">
+        ¿No encuentras la respuesta que buscas?
+      </p>
+      <a 
+        href="#contacto"
+        class="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg transition-colors"
+      >
+        Contáctanos
+        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  function toggleFAQ(faqId) {
+    const faqContent = document.getElementById(faqId);
+    const faqIcon = document.getElementById(faqId + '-icon');
+    
+    if (faqContent.classList.contains('hidden')) {
+      faqContent.classList.remove('hidden');
+      faqIcon.style.transform = 'rotate(180deg)';
+    } else {
+      faqContent.classList.add('hidden');
+      faqIcon.style.transform = 'rotate(0deg)';
+    }
+  }
+
+  // Make the function globally accessible
+  window.toggleFAQ = toggleFAQ;
+</script>
