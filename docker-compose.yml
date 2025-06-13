@@ -5,6 +5,5 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8080:80"
-    volumes:
-      - ./src:/app/src:ro
+    # Eliminamos el volumen para evitar interferencias con los archivos estáticos
     restart: unless-stopped
