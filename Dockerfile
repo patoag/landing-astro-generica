@@ -21,16 +21,15 @@ RUN ls -la dist/
 FROM nginx:alpine
 
 # Crear archivo de configuración personalizado de Nginx
-RUN echo '
-server {
-    listen 80;
-    listen [::]:80;
-    
-    location / {
-        root /usr/share/nginx/html;
-        index index.html;
-        try_files $uri $uri/ /index.html;
-    }
+RUN echo $'server {\
+    listen 80;\
+    listen [::]:80;\
+    \
+    location / {\
+        root /usr/share/nginx/html;\
+        index index.html;\
+        try_files $uri $uri/ /index.html;\
+    }\
 }' > /etc/nginx/conf.d/default.conf
 
 # Copiar los archivos estáticos desde la etapa de construcción
