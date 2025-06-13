@@ -1,4 +1,5 @@
-FROM node:18-alpine AS base
+# Etapa de construcción
+FROM node:18-alpine AS build
 
 # Establecer el directorio de trabajo
 WORKDIR /app
@@ -10,23 +11,16 @@ RUN npm ci
 # Copiar el resto del código fuente
 COPY . .
 
-# Build para producción
+# Build para producción (sitio estático)
 RUN npm run build
 
-# Etapa para producción con menos dependencias
-FROM node:18-alpine AS production
+# Etapa de producción con nginx para servir archivos estáticos
+FROM nginx:alpine
 
-WORKDIR /app
+# Copiar configuración personalizada de nginx si es necesaria
+COPY --from=build /app/dist /usr/share/nginx/html
 
-# Copiar sólo los archivos necesarios para producción
-COPY --from=base /app/dist /app/dist
-COPY --from=base /app/package.json /app/
+# Exponer puerto 80
+EXPOSE 80
 
-# Instalar sólo las dependencias de producción
-RUN npm install --production
-
-# Exponer el puerto
-EXPOSE 4321
-
-# Comando para iniciar la aplicación
-CMD ["node", "./dist/server/entry.mjs"]
+# Nginx arranca automáticamente, no es necesario especificar un CMD

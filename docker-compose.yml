@@ -1,14 +1,10 @@
-version: '3'
-
 services:
   landing-page:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "4321:4321"
+      - "8080:80"
     volumes:
-      - ./src:/app/src
-    environment:
-      - NODE_ENV=production
+      - ./src:/app/src:ro
     restart: unless-stopped
